@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.card {
+  background-color: #000000;
+  border-radius: 16px;
+  padding: 40px 48px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 8px 32px rgb(115, 26, 216);
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #8c3bf6;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  background-color: #1e293b;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.nome {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.cargo {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+}
+
+.curtidas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.icone-coracao {
+  font-size: 1.1rem;
+}
+
+.botao-curtir {
+  background: transparent;
+  border: none;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  margin: 0 auto;
+}
+
+.botao-curtir:hover {
+  background-color: #2a2a3a;
+}
+
+.icone-like {
+  font-size: 1.1rem;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.botao-social {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.botao-social.github {
+  background-color: #24292e;
+}
+
+.botao-social.github:hover {
+  background-color: #000000;
+}
+
+.botao-social.linkedin {
+  background-color: #0a66c2;
+}
+
+.botao-social.linkedin:hover {
+  background-color: #004182;
+}
