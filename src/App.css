@@ -1,35 +1,67 @@
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #000000;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #ffffff;
 }
+
+
 
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   width: 100%;
+  padding: 50px 20px;
+  gap: 45px;
 }
+
+
 
 .card {
   background-color: #000000;
+  border: 1px solid #241239;
   border-radius: 16px;
   padding: 40px 48px;
   text-align: center;
   width: 320px;
+  max-width: 100%;
+  flex-shrink: 0;
   box-shadow: 0 8px 32px rgb(115, 26, 216);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
+
+.card:hover {
+  box-shadow:
+    0 8px 38px rgba(115, 26, 216, 0.85),
+    0 0 15px rgba(140, 59, 246, 0.2);
+}
+
 
 .avatar {
   width: 90px;
@@ -39,6 +71,7 @@ body {
   overflow: hidden;
   margin: 0 auto 20px;
   background-color: #1e293b;
+  box-shadow: 0 0 18px rgba(140, 59, 246, 0.3);
 }
 
 .avatar img {
@@ -47,6 +80,8 @@ body {
   object-fit: cover;
   display: block;
 }
+
+
 
 .nome {
   color: #ffffff;
@@ -61,6 +96,8 @@ body {
   margin-bottom: 28px;
 }
 
+
+
 .curtidas {
   display: flex;
   align-items: center;
@@ -72,8 +109,11 @@ body {
 }
 
 .icone-coracao {
+  color: #ff4d8d;
   font-size: 1.1rem;
 }
+
+
 
 .botao-curtir {
   background: transparent;
@@ -87,17 +127,33 @@ body {
   cursor: pointer;
   padding: 8px 16px;
   border-radius: 8px;
-  transition: all 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
   margin: 0 auto;
 }
 
 .botao-curtir:hover {
   background-color: #2a2a3a;
+  color: #d8b4fe;
+}
+
+.botao-curtir:active {
+  transform: scale(0.95);
+}
+
+.botao-curtir:focus-visible {
+  outline: 2px solid #8c3bf6;
+  outline-offset: 4px;
 }
 
 .icone-like {
+  color: #ff4d8d;
   font-size: 1.1rem;
 }
+
+
 
 .redes-sociais {
   display: flex;
@@ -112,8 +168,19 @@ body {
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: all 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
   color: white;
+}
+
+.botao-social:hover {
+  transform: translateY(-2px);
+}
+
+.botao-social:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
 }
 
 .botao-social.github {
@@ -121,7 +188,7 @@ body {
 }
 
 .botao-social.github:hover {
-  background-color: #000000;
+  background-color: #333333;
 }
 
 .botao-social.linkedin {
@@ -130,4 +197,192 @@ body {
 
 .botao-social.linkedin:hover {
   background-color: #004182;
+}
+
+
+.comentarios {
+  width: 100%;
+  max-width: 650px;
+  min-width: 0;
+}
+
+
+
+.cabecalho-comentarios {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.titulo-comentarios {
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-shadow: 0 0 15px rgba(140, 59, 246, 0.6);
+}
+
+.subtitulo-comentarios {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+
+
+.lista-comentarios {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+
+
+.comentario-card {
+  width: 100%;
+  background-color: #000000;
+  border: 1px solid #302044;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 5px 25px rgba(115, 26, 216, 0.2);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.comentario-card:hover {
+  border-color: #8c3bf6;
+  box-shadow: 0 5px 30px rgba(115, 26, 216, 0.4);
+  transform: translateY(-3px);
+}
+
+
+
+.comentario-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.foto-comentario {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #8c3bf6;
+  background-color: #1e293b;
+}
+
+
+.dados-comentario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 0;
+}
+
+.dados-comentario h3 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+
+
+.stars {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.estrelas-cheias {
+  color: #facc15;
+}
+
+.estrelas-vazias {
+  color: #393342;
+}
+
+
+
+.comentario-card hr {
+  border: none;
+  height: 1px;
+  background-color: #302044;
+  margin: 18px 0;
+}
+
+
+.texto-comentario {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 15px;
+    gap: 35px;
+  }
+
+  .card {
+    padding: 35px 25px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .nome {
+    font-size: 1.3rem;
+  }
+
+  .comentarios {
+    width: 100%;
+  }
+
+  .titulo-comentarios {
+    font-size: 1.45rem;
+  }
+
+  .comentario-card {
+    padding: 18px;
+  }
+
+  .foto-comentario {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+  }
+
+  .texto-comentario {
+    font-size: 0.9rem;
+  }
+
+  .redes-sociais {
+    gap: 8px;
+  }
+
+  .botao-social {
+    padding: 9px 12px;
+  }
+}
+
+
+
+@media (min-width: 900px) {
+  .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .comentarios {
+    max-width: 650px;
+  }
 }
