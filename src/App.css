@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -26,8 +24,6 @@ body {
   color: #ffffff;
 }
 
-
-
 .container {
   display: flex;
   flex-direction: column;
@@ -36,10 +32,15 @@ body {
   min-height: 100vh;
   width: 100%;
   padding: 50px 20px;
-  gap: 45px;
+  gap: 35px;
 }
 
-
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
 
 .card {
   background-color: #000000;
@@ -50,7 +51,7 @@ body {
   width: 320px;
   max-width: 100%;
   flex-shrink: 0;
-  box-shadow: 0 8px 32px rgb(115, 26, 216);
+  box-shadow: 0 8px 32px rgba(115, 26, 216, 0.4);
   transition:
     box-shadow 0.3s ease,
     transform 0.3s ease;
@@ -61,7 +62,6 @@ body {
     0 8px 38px rgba(115, 26, 216, 0.85),
     0 0 15px rgba(140, 59, 246, 0.2);
 }
-
 
 .avatar {
   width: 90px;
@@ -81,8 +81,6 @@ body {
   display: block;
 }
 
-
-
 .nome {
   color: #ffffff;
   font-size: 1.4rem;
@@ -93,10 +91,139 @@ body {
 .cargo {
   color: #94a3b8;
   font-size: 0.95rem;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
+.comentario-fixado {
+  background-color: #12091f;
+  border: 1px dashed #8c3bf6;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+.comentario-fixado.animar {
+  animation: pulseHighlight 0.4s ease-in-out;
+}
+
+@keyframes pulseHighlight {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(140, 59, 246, 0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tag-fixado-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.tag-fixado {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #8c3bf6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tempo-fixado {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.autor-fixado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.foto-fixado {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #8c3bf6;
+}
+
+.info-autor-fixado h4 {
+  font-size: 0.85rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.texto-fixado {
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.resposta-container {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #241239;
+}
+
+.tag-resposta {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #d8b4fe;
+}
+
+.texto-resposta {
+  font-size: 0.8rem;
+  color: #e2e8f0;
+  margin-top: 2px;
+}
+
+.form-resposta {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.input-resposta {
+  flex: 1;
+  background-color: #000000;
+  border: 1px solid #302044;
+  border-radius: 6px;
+  padding: 5px 8px;
+  color: #ffffff;
+  font-size: 0.75rem;
+  outline: none;
+}
+
+.input-resposta:focus {
+  border-color: #8c3bf6;
+}
+
+.botao-enviar-resposta {
+  background-color: #8c3bf6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botao-enviar-resposta:hover {
+  background-color: #731ad8;
+}
 
 .curtidas {
   display: flex;
@@ -105,7 +232,7 @@ body {
   gap: 8px;
   color: #e2e8f0;
   font-size: 0.95rem;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .icone-coracao {
@@ -113,11 +240,9 @@ body {
   font-size: 1.1rem;
 }
 
-
-
 .botao-curtir {
   background: transparent;
-  border: none;
+  border: 1px solid #302044;
   color: #e2e8f0;
   font-size: 0.95rem;
   display: flex;
@@ -130,17 +255,20 @@ body {
   transition:
     background-color 0.2s ease,
     color 0.2s ease,
+    border-color 0.2s ease,
     transform 0.2s ease;
   margin: 0 auto;
+  width: 100%;
 }
 
 .botao-curtir:hover {
   background-color: #2a2a3a;
   color: #d8b4fe;
+  border-color: #8c3bf6;
 }
 
 .botao-curtir:active {
-  transform: scale(0.95);
+  transform: scale(0.98);
 }
 
 .botao-curtir:focus-visible {
@@ -152,8 +280,6 @@ body {
   color: #ff4d8d;
   font-size: 1.1rem;
 }
-
-
 
 .redes-sociais {
   display: flex;
@@ -170,11 +296,13 @@ body {
   font-weight: 500;
   transition:
     background-color 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    opacity 0.2s ease;
   color: white;
+  border: none;
 }
 
-.botao-social:hover {
+.botao-social:hover:not(:disabled) {
   transform: translateY(-2px);
 }
 
@@ -187,7 +315,7 @@ body {
   background-color: #24292e;
 }
 
-.botao-social.github:hover {
+.botao-social.github:hover:not(:disabled) {
   background-color: #333333;
 }
 
@@ -195,18 +323,22 @@ body {
   background-color: #0a66c2;
 }
 
-.botao-social.linkedin:hover {
+.botao-social.linkedin:hover:not(:disabled) {
   background-color: #004182;
 }
 
+.botao-social:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
 
 .comentarios {
   width: 100%;
   max-width: 650px;
   min-width: 0;
 }
-
-
 
 .cabecalho-comentarios {
   text-align: center;
@@ -227,16 +359,12 @@ body {
   line-height: 1.6;
 }
 
-
-
 .lista-comentarios {
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
 }
-
-
 
 .comentario-card {
   width: 100%;
@@ -257,14 +385,11 @@ body {
   transform: translateY(-3px);
 }
 
-
-
 .comentario-cabecalho {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-
 
 .foto-comentario {
   width: 58px;
@@ -275,7 +400,6 @@ body {
   border: 2px solid #8c3bf6;
   background-color: #1e293b;
 }
-
 
 .dados-comentario {
   display: flex;
@@ -292,8 +416,6 @@ body {
   overflow-wrap: anywhere;
 }
 
-
-
 .stars {
   display: flex;
   align-items: center;
@@ -309,15 +431,12 @@ body {
   color: #393342;
 }
 
-
-
 .comentario-card hr {
   border: none;
   height: 1px;
   background-color: #302044;
   margin: 18px 0;
 }
-
 
 .texto-comentario {
   color: #cbd5e1;
@@ -326,11 +445,10 @@ body {
   overflow-wrap: anywhere;
 }
 
-
 @media (max-width: 480px) {
   .container {
     padding: 30px 15px;
-    gap: 35px;
+    gap: 25px;
   }
 
   .card {
@@ -373,8 +491,6 @@ body {
     padding: 9px 12px;
   }
 }
-
-
 
 @media (min-width: 900px) {
   .container {
