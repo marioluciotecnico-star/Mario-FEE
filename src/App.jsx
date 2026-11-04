@@ -7,7 +7,7 @@ const PERFIS = [
     nome: 'Sukuna',
     cargo: 'O rei das maldições',
     foto: 'https://i.pinimg.com/564x/af/9f/4a/af9f4ae25d2a2c46870f725847396957.jpg',
-    bio: '.',
+    bio: 'Rei das maldições da era Heian.',
     github: 'https://github.com/marioluciotecnico-star',
     linkedin: 'https://www.linkedin.com/in/mario-lucio-33235b403/',
     curtidasIniciais: 0,
@@ -17,20 +17,103 @@ const PERFIS = [
     nome: 'Gojo',
     cargo: 'O mais foda aqui',
     foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxHuY0yylO72Ic-gACmK-THeYGuMpU2uBdIRwDdzPISRsCCHrCe3Wj12M&s=10',
-    bio: '.',
+    bio: 'O feiticeiro mais forte da atualidade.',
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
     curtidasIniciais: 5,
   },
   {
     id: 3,
-    nome: 'Gojo x sukuna ',
+    nome: 'Gojo x Sukuna',
     cargo: 'Luta de milhões',
     foto: 'https://uploads.spiritfanfiction.com/historias/capas/202104/imagine-sukuna-x-leitora-x-gojo-22178159-260420210145.jpg',
-    bio: '.',
+    bio: 'O confronto definitivo entre os mais fortes.',
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
     curtidasIniciais: 5,
+  },
+]
+
+const IMAGENS_GALERIA = [
+  {
+    id: 1,
+    url: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=600',
+    legenda: 'Estátua Clássica em Mármore',
+  },
+  {
+    id: 2,
+    url: 'https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=600',
+    legenda: 'Arte Antiga e Escultura',
+  },
+  {
+    id: 3,
+    url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600',
+    legenda: 'Vista Panorâmica da Montanha',
+  },
+  {
+    id: 4,
+    url: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600',
+    legenda: 'Paisagem Natural e Horizonte',
+  },
+  {
+    id: 5,
+    url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600',
+    legenda: 'Estátua Monumental Iluminada',
+  },
+  {
+    id: 6,
+    url: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600',
+    legenda: 'Vista Noturna da Cidade Famosa',
+  },
+  {
+    id: 7,
+    url: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600',
+    legenda: 'Escultura Detalhada em Bronze',
+  },
+  {
+    id: 8,
+    url: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600',
+    legenda: 'Vale Verde e Vista Aberta',
+  },
+  {
+    id: 9,
+    url: 'https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600',
+    legenda: 'Busto Esculpido Histórico',
+  },
+  {
+    id: 10,
+    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600',
+    legenda: 'Vista Paradisíaca do Oceano',
+  },
+  {
+    id: 11,
+    url: 'https://images.unsplash.com/photo-1541971875076-8f970d573be6?w=600',
+    legenda: 'Monumento e Arquitetura Antiga',
+  },
+]
+
+// Produtos digitais atualizados com imagens de computadores e nomes apresentáveis
+const PRODUTOS_DIGITAIS = [
+  {
+    id: 1,
+    titulo: 'Workstation Pro Developer',
+    descricao: 'Ambiente de desenvolvimento completo otimizado para alta performance em programação e multitarefas.',
+    preco: 'R$ 149,90',
+    imagem: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400',
+  },
+  {
+    id: 2,
+    titulo: 'Masterclass Setup Fullstack',
+    descricao: 'Guia definitivo e prático para configurar o seu computador com as melhores ferramentas de código.',
+    preco: 'R$ 89,90',
+    imagem: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400',
+  },
+  {
+    id: 3,
+    titulo: 'Kit Produtividade Extrema',
+    descricao: 'Conjunto de softwares e atalhos essenciais para turbinar o seu fluxo de trabalho diário no PC.',
+    preco: 'R$ 59,90',
+    imagem: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400',
   },
 ]
 
@@ -239,6 +322,76 @@ function ProfileCard({ perfil }) {
   )
 }
 
+function GaleriaCard() {
+  const [indiceImagem, setIndiceImagem] = useState(0)
+
+  const handleProxima = () => {
+    setIndiceImagem((prev) => (prev + 1) % IMAGENS_GALERIA.length)
+  }
+
+  const imagemAtual = IMAGENS_GALERIA[indiceImagem]
+
+  return (
+    <section className="galeria-card">
+      <div className="galeria-cabecalho">
+        <h3 className="titulo-galeria">Galeria em Destaque</h3>
+        <span className="contador-galeria">
+          {indiceImagem + 1} de {IMAGENS_GALERIA.length}
+        </span>
+      </div>
+
+      <div className="galeria-imagem-container">
+        <img src={imagemAtual.url} alt={imagemAtual.legenda} className="galeria-img" />
+      </div>
+
+      <p className="galeria-legenda">{imagemAtual.legenda}</p>
+
+      <button type="button" className="botao-proxima" onClick={handleProxima}>
+        Próxima
+      </button>
+    </section>
+  )
+}
+
+function ProdutosDigitaisSection() {
+  const handleComprar = (titulo) => {
+    alert(`Redirecionando para o checkout do produto: ${titulo}`)
+  }
+
+  return (
+    <section className="produtos-section">
+      <div className="cabecalho-comentarios">
+        <h2 className="titulo-comentarios">Produtos Digitais</h2>
+        <p className="subtitulo-comentarios">Soluções tecnológicas para elevar o seu nível</p>
+      </div>
+
+      <div className="lista-produtos">
+        {PRODUTOS_DIGITAIS.map((produto) => (
+          <article className="produto-card" key={produto.id}>
+            <div className="produto-imagem-container">
+              <img src={produto.imagem} alt={produto.titulo} className="produto-img" />
+            </div>
+            <div className="produto-conteudo">
+              <h3 className="produto-titulo">{produto.titulo}</h3>
+              <p className="produto-descricao">{produto.descricao}</p>
+              <div className="produto-footer">
+                <span className="produto-preco">{produto.preco}</span>
+                <button
+                  type="button"
+                  className="botao-comprar"
+                  onClick={() => handleComprar(produto.titulo)}
+                >
+                  Comprar
+                </button>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 export default function App() {
   const [index, setIndex] = useState(0)
 
@@ -326,6 +479,10 @@ export default function App() {
       </nav>
 
       <ProfileCard key={perfilAtivo.id} perfil={perfilAtivo} />
+
+      <GaleriaCard />
+
+      <ProdutosDigitaisSection />
 
       <section className="comentarios">
         <div className="cabecalho-comentarios">
