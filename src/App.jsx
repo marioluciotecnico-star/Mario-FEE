@@ -35,149 +35,28 @@ const PERFIS = [
 ]
 
 const IMAGENS_GALERIA = [
-  {
-    id: 1,
-    url: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=600',
-    legenda: 'Estátua Clássica em Mármore',
-  },
-  {
-    id: 2,
-    url: 'https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=600',
-    legenda: 'Arte Antiga e Escultura',
-  },
-  {
-    id: 3,
-    url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600',
-    legenda: 'Vista Panorâmica da Montanha',
-  },
-  {
-    id: 4,
-    url: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600',
-    legenda: 'Paisagem Natural e Horizonte',
-  },
-  {
-    id: 5,
-    url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600',
-    legenda: 'Estátua Monumental Iluminada',
-  },
-  {
-    id: 6,
-    url: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600',
-    legenda: 'Vista Noturna da Cidade Famosa',
-  },
-  {
-    id: 7,
-    url: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600',
-    legenda: 'Escultura Detalhada em Bronze',
-  },
-  {
-    id: 8,
-    url: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600',
-    legenda: 'Vale Verde e Vista Aberta',
-  },
-  {
-    id: 9,
-    url: 'https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600',
-    legenda: 'Busto Esculpido Histórico',
-  },
-  {
-    id: 10,
-    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600',
-    legenda: 'Vista Paradisíaca do Oceano',
-  },
-  {
-    id: 11,
-    url: 'https://images.unsplash.com/photo-1541971875076-8f970d573be6?w=600',
-    legenda: 'Monumento e Arquitetura Antiga',
-  },
+  { id: 1, url: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=600', legenda: 'Estátua Clássica em Mármore' },
+  { id: 2, url: 'https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=600', legenda: 'Arte Antiga e Escultura' },
+  { id: 3, url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600', legenda: 'Vista Panorâmica da Montanha' },
+  { id: 4, url: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600', legenda: 'Paisagem Natural e Horizonte' },
+  { id: 5, url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600', legenda: 'Estátua Monumental Iluminada' },
+  { id: 6, url: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600', legenda: 'Vista Noturna da Cidade Famosa' },
+  { id: 7, url: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600', legenda: 'Escultura Detalhada em Bronze' },
+  { id: 8, url: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600', legenda: 'Vale Verde e Vista Aberta' },
+  { id: 9, url: 'https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600', legenda: 'Busto Esculpido Histórico' },
+  { id: 10, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600', legenda: 'Vista Paradisíaca do Oceano' },
+  { id: 11, url: 'https://images.unsplash.com/photo-1541971875076-8f970d573be6?w=600', legenda: 'Monumento e Arquitetura Antiga' },
 ]
 
-// Produtos digitais atualizados com imagens de computadores e nomes apresentáveis
 const PRODUTOS_DIGITAIS = [
-  {
-    id: 1,
-    titulo: 'Workstation Pro Developer',
-    descricao: 'Ambiente de desenvolvimento completo otimizado para alta performance em programação e multitarefas.',
-    preco: 'R$ 149,90',
-    imagem: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400',
-  },
-  {
-    id: 2,
-    titulo: 'Masterclass Setup Fullstack',
-    descricao: 'Guia definitivo e prático para configurar o seu computador com as melhores ferramentas de código.',
-    preco: 'R$ 89,90',
-    imagem: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400',
-  },
-  {
-    id: 3,
-    titulo: 'Kit Produtividade Extrema',
-    descricao: 'Conjunto de softwares e atalhos essenciais para turbinar o seu fluxo de trabalho diário no PC.',
-    preco: 'R$ 59,90',
-    imagem: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400',
-  },
+  { id: 1, titulo: 'Workstation Pro Developer', descricao: 'Ambiente de desenvolvimento otimizado para alta performance.', preco: 'R$ 149,90', imagem: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400' },
+  { id: 2, titulo: 'Masterclass Setup Fullstack', descricao: 'Guia definitivo e prático para configurar o seu PC.', preco: 'R$ 89,90', imagem: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400' },
+  { id: 3, titulo: 'Kit Produtividade Extrema', descricao: 'Softwares e atalhos essenciais para turbinar o seu dia a dia.', preco: 'R$ 59,90', imagem: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400' },
 ]
 
 const COMENTARIOS_FIXADOS_ALEATORIOS = [
-  {
-    nome: 'Lucas Andrade',
-    foto: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100',
-    texto: 'Primeiro a curtir! Esse projeto está ficando excelente.',
-    tempo: 'Agora mesmo',
-  },
-  {
-    nome: 'Beatriz Lima',
-    foto: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100',
-    texto: 'Que efeito incrível! Adorei a combinação de cores e animações.',
-    tempo: 'Há 1 min',
-  },
-  {
-    nome: 'Rafael Torres',
-    foto: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100',
-    texto: 'Mais uma curtida garantida! O componente está super responsivo.',
-    tempo: 'Há 3 min',
-  },
-  {
-    nome: 'Camila Rocha',
-    foto: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100',
-    texto: 'Incrível ver a evolução do perfil! Parabéns pelo trabalho.',
-    tempo: 'Há 5 min',
-  },
-  {
-    nome: 'Thiago Mendes',
-    foto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100',
-    texto: 'Design impecável! Muito bom ver códigos limpos assim.',
-    tempo: 'Há 8 min',
-  },
-  {
-    nome: 'Fernanda Souza',
-    foto: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100',
-    texto: 'Interface muito limpa e intuitiva, deixou o layout incrível!',
-    tempo: 'Há 12 min',
-  },
-  {
-    nome: 'Gabriel Oliveira',
-    foto: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100',
-    texto: 'Top demais! O modo escuro combinou muito com o estilo neon.',
-    tempo: 'Há 15 min',
-  },
-  {
-    nome: 'Larissa Martins',
-    foto: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100',
-    texto: 'Acompanhando a evolução! Muito sucesso no aprendizado de React.',
-    tempo: 'Há 20 min',
-  },
-  {
-    nome: 'Bruno Carvalho',
-    foto: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100',
-    texto: 'Componentização nota 10. Ficou super organizado!',
-    tempo: 'Há 25 min',
-  },
-  {
-    nome: 'Vanessa Dias',
-    foto: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100',
-    texto: 'Achei super dinâmico o botão de curtir com interação imediata.',
-    tempo: 'Há 30 min',
-  },
+  { nome: 'Lucas Andrade', foto: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100', texto: 'Primeiro a curtir! Esse projeto está excelente.', tempo: 'Agora mesmo' },
+  { nome: 'Beatriz Lima', foto: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100', texto: 'Que efeito incrível! Adorei as animações.', tempo: 'Há 1 min' },
 ]
 
 function ProfileCard({ perfil }) {
@@ -190,23 +69,12 @@ function ProfileCard({ perfil }) {
 
   const handleCurtir = () => {
     setCurtidas((prev) => prev + 1)
-
-    let novoIndex
-    do {
-      novoIndex = Math.floor(Math.random() * COMENTARIOS_FIXADOS_ALEATORIOS.length)
-    } while (
-      COMENTARIOS_FIXADOS_ALEATORIOS[novoIndex].nome === fixadoAtual.nome &&
-      COMENTARIOS_FIXADOS_ALEATORIOS.length > 1
-    )
-
+    const novoIndex = Math.floor(Math.random() * COMENTARIOS_FIXADOS_ALEATORIOS.length)
     setFixadoAtual(COMENTARIOS_FIXADOS_ALEATORIOS[novoIndex])
     setRespostaEnviada('')
-
     setAnimate(true)
     setTimeout(() => setAnimate(false), 400)
   }
-
-  const handleToggleDetails = () => setShowMore((prev) => !prev)
 
   const handleEnviarResposta = (e) => {
     e.preventDefault()
@@ -218,105 +86,65 @@ function ProfileCard({ perfil }) {
   return (
     <section className="card">
       <div className="avatar">
-        <img src={perfil.foto} alt={`Foto de perfil de ${perfil.nome}`} />
+        <img src={perfil.foto} alt={`Foto de ${perfil.nome}`} />
       </div>
-
       <h1 className="nome">{perfil.nome}</h1>
       <p className="cargo">{perfil.cargo}</p>
+
+      {/* Mensagem condicional exigida para curtidas > 5 */}
+      {curtidas > 5 && <h2 className="destaque-tecinfo" style={{ color: '#00d9ff', marginBottom: '15px' }}>TECINFO 2026</h2>}
 
       <div className={`comentario-fixado ${animate ? 'animar' : ''}`}>
         <div className="tag-fixado-wrapper">
           <span className="tag-fixado">Última Curtida</span>
           <span className="tempo-fixado">{fixadoAtual.tempo}</span>
         </div>
-
         <div className="autor-fixado">
-          <img
-            src={fixadoAtual.foto}
-            alt={`Foto de ${fixadoAtual.nome}`}
-            className="foto-fixado"
-          />
+          <img src={fixadoAtual.foto} alt={fixadoAtual.nome} className="foto-fixado" />
           <div className="info-autor-fixado">
             <h4>{fixadoAtual.nome}</h4>
             <p className="texto-fixado">"{fixadoAtual.texto}"</p>
           </div>
         </div>
-
         {respostaEnviada && (
           <div className="resposta-container">
             <span className="tag-resposta">Sua resposta:</span>
             <p className="texto-resposta">{respostaEnviada}</p>
           </div>
         )}
-
         <form onSubmit={handleEnviarResposta} className="form-resposta">
           <input
             type="text"
-            placeholder="Responder comentário..."
+            placeholder="Responder..."
             value={textoResposta}
             onChange={(e) => setTextoResposta(e.target.value)}
             className="input-resposta"
           />
-          <button type="submit" className="botao-enviar-resposta">
-            Enviar
-          </button>
+          <button type="submit" className="botao-enviar-resposta">Enviar</button>
         </form>
       </div>
 
       {curtidas > 0 && (
         <div className="curtidas">
           <span className="icone-coracao">❤</span>
-          <span>
-            {curtidas} {curtidas === 1 ? 'Curtida' : 'Curtidas'}
-          </span>
+          <span>{curtidas} {curtidas === 1 ? 'Curtida' : 'Curtidas'}</span>
         </div>
       )}
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', width: '100%' }}>
-        <button
-          type="button"
-          className="botao-curtir"
-          onClick={handleCurtir}
-          aria-label="Curtir perfil"
-        >
-          <span className="icone-like">❤</span>
-          Curtir
+        <button type="button" className="botao-curtir" onClick={handleCurtir}>
+          <span className="icone-like">❤</span> Curtir
         </button>
-
-        <button
-          type="button"
-          className="botao-curtir"
-          onClick={handleToggleDetails}
-          style={{ fontSize: '0.85rem', opacity: 0.9 }}
-        >
+        <button type="button" className="botao-curtir" onClick={() => setShowMore((prev) => !prev)}>
           {showMore ? 'Ocultar' : 'Mostrar'} Detalhes
         </button>
       </div>
 
-      {showMore && (
-        <p className="subtitulo-comentarios" style={{ marginTop: '16px', textAlign: 'center' }}>
-          {perfil.bio}
-        </p>
-      )}
+      {showMore && <p className="subtitulo-comentarios" style={{ marginTop: '16px' }}>{perfil.bio}</p>}
 
       <div className="redes-sociais">
-        <a
-          href={perfil.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="botao-social github"
-        >
-          GitHub
-        </a>
-
-        <a
-          href={perfil.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="botao-social linkedin"
-        >
-          LinkedIn
-        </a>
+        <a href={perfil.github} target="_blank" rel="noopener noreferrer" className="botao-social github">GitHub</a>
+        <a href={perfil.linkedin} target="_blank" rel="noopener noreferrer" className="botao-social linkedin">LinkedIn</a>
       </div>
     </section>
   )
@@ -324,155 +152,61 @@ function ProfileCard({ perfil }) {
 
 function GaleriaCard() {
   const [indiceImagem, setIndiceImagem] = useState(0)
-
-  const handleProxima = () => {
-    setIndiceImagem((prev) => (prev + 1) % IMAGENS_GALERIA.length)
-  }
-
   const imagemAtual = IMAGENS_GALERIA[indiceImagem]
 
   return (
     <section className="galeria-card">
       <div className="galeria-cabecalho">
         <h3 className="titulo-galeria">Galeria em Destaque</h3>
-        <span className="contador-galeria">
-          {indiceImagem + 1} de {IMAGENS_GALERIA.length}
-        </span>
+        <span className="contador-galeria">{indiceImagem + 1} de {IMAGENS_GALERIA.length}</span>
       </div>
-
       <div className="galeria-imagem-container">
         <img src={imagemAtual.url} alt={imagemAtual.legenda} className="galeria-img" />
       </div>
-
       <p className="galeria-legenda">{imagemAtual.legenda}</p>
-
-      <button type="button" className="botao-proxima" onClick={handleProxima}>
+      <button type="button" className="botao-proxima" onClick={() => setIndiceImagem((prev) => (prev + 1) % IMAGENS_GALERIA.length)}>
         Próxima
       </button>
     </section>
   )
 }
 
-function ProdutosDigitaisSection() {
-  const handleComprar = (titulo) => {
-    alert(`Redirecionando para o checkout do produto: ${titulo}`)
-  }
-
-  return (
-    <section className="produtos-section">
-      <div className="cabecalho-comentarios">
-        <h2 className="titulo-comentarios">Produtos Digitais</h2>
-        <p className="subtitulo-comentarios">Soluções tecnológicas para elevar o seu nível</p>
-      </div>
-
-      <div className="lista-produtos">
-        {PRODUTOS_DIGITAIS.map((produto) => (
-          <article className="produto-card" key={produto.id}>
-            <div className="produto-imagem-container">
-              <img src={produto.imagem} alt={produto.titulo} className="produto-img" />
-            </div>
-            <div className="produto-conteudo">
-              <h3 className="produto-titulo">{produto.titulo}</h3>
-              <p className="produto-descricao">{produto.descricao}</p>
-              <div className="produto-footer">
-                <span className="produto-preco">{produto.preco}</span>
-                <button
-                  type="button"
-                  className="botao-comprar"
-                  onClick={() => handleComprar(produto.titulo)}
-                >
-                  Comprar
-                </button>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  )
-}
-
 export default function App() {
   const [index, setIndex] = useState(0)
-
-  const comentarios = [
-    {
-      id: 1,
-      nome: 'Luna Julia',
-      foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Nw-qaenftjN1sxzASbX6j3SyXXvCVZjV7bSP4FLI5BRrRlwileK1V8Sh&s=10',
-      estrelas: 5,
-      texto: 'Visual do perfil, incrível.',
-    },
-    {
-      id: 2,
-      nome: 'Carlos Silva',
-      foto: 'https://i.pinimg.com/originals/da/8c/c7/da8cc72bce3549bc1f69ea281b5dc73c.jpg',
-      estrelas: 5,
-      texto: 'Perfil muito bonito! Gostei do estilo moderno, das cores e dos efeitos visuais.',
-    },
-    {
-      id: 3,
-      nome: 'Mariana Costa',
-      foto: 'https://focalizando.com.br/sites/default/files/2022-11/fotos-para-perfil-masculino-tres-dicas-fundamentais-para-transmitir-imagem-que-deseja.jpg',
-      estrelas: 4,
-      texto: 'Excelente trabalho! A página ficou organizada, bonita e fácil de navegar.',
-    },
-    {
-      id: 4,
-      nome: 'Felipe Alencar',
-      foto: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100',
-      estrelas: 5,
-      texto: 'Trabalho exemplar! A utilização dos componentes do React ficou muito fluida.',
-    },
-    {
-      id: 5,
-      nome: 'Juliana Paes',
-      foto: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100',
-      estrelas: 5,
-      texto: 'Design super elegante e moderno. A paleta de cores escura ficou excelente!',
-    },
-    {
-      id: 6,
-      nome: 'Diego Fernandes',
-      foto: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100',
-      estrelas: 5,
-      texto: 'Muito boa a estrutura do código. Fácil de ler e manter.',
-    },
-  ]
-
-  const handleNext = () => {
-    if (index < PERFIS.length - 1) setIndex((prev) => prev + 1)
-  }
-
-  const handlePrev = () => {
-    if (index > 0) setIndex((prev) => prev - 1)
-  }
+  const [textoEspelhado, setTextoEspelhado] = useState('') // Espelhamento de input em tempo real
 
   const perfilAtivo = PERFIS[index]
 
   return (
     <main className="container">
+      <header className="cabecalho-principal" style={{ textAlign: 'center', marginBottom: '10px' }}>
+        <h1 className="titulo-comentarios">Painel de Controle - Tecinfo 2026</h1>
+      </header>
+
+      {/* Seção de espelhamento de input */}
+      <section className="espelhamento-container" style={{ width: '100%', maxWidth: '380px', textAlign: 'center' }}>
+        <input
+          type="text"
+          placeholder="Digite algo para espelhar..."
+          value={textoEspelhado}
+          onChange={(e) => setTextoEspelhado(e.target.value)}
+          className="input-resposta"
+          style={{ width: '100%', padding: '10px', borderRadius: '8px', marginBottom: '8px' }}
+        />
+        <div className="card-espelho" style={{ color: '#94a3b8', fontSize: '0.9rem' }}>
+          <p>Texto em tempo real: <strong style={{ color: '#fff' }}>{textoEspelhado || 'Nenhum texto digitado'}</strong></p>
+        </div>
+      </section>
+
       <nav style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
         <p style={{ color: '#94a3b8', fontSize: '0.95rem', fontWeight: '500' }}>
           Perfil ({index + 1} de {PERFIS.length})
         </p>
-
         <div style={{ display: 'flex', gap: '12px' }}>
-          <button
-            type="button"
-            className="botao-social github"
-            onClick={handlePrev}
-            disabled={index === 0}
-          >
+          <button type="button" className="botao-social github" onClick={() => setIndex((prev) => prev - 1)} disabled={index === 0}>
             Anterior
           </button>
-
-          <button
-            type="button"
-            className="botao-social github"
-            onClick={handleNext}
-            disabled={index === PERFIS.length - 1}
-          >
+          <button type="button" className="botao-social github" onClick={() => setIndex((prev) => prev + 1)} disabled={index === PERFIS.length - 1}>
             Próximo
           </button>
         </div>
@@ -482,45 +216,27 @@ export default function App() {
 
       <GaleriaCard />
 
-      <ProdutosDigitaisSection />
-
-      <section className="comentarios">
+      <section className="produtos-section">
         <div className="cabecalho-comentarios">
-          <h2 className="titulo-comentarios">Comentários</h2>
-          <p className="subtitulo-comentarios">Avaliações e opiniões sobre o perfil</p>
+          <h2 className="titulo-comentarios">Produtos Digitais</h2>
+          <p className="subtitulo-comentarios">Soluções tecnológicas</p>
         </div>
-
-        <div className="lista-comentarios">
-          {comentarios.map((comentario) => (
-            <article className="comentario-card" key={comentario.id}>
-              <div className="comentario-cabecalho">
-                <img
-                  className="foto-comentario"
-                  src={comentario.foto}
-                  alt={`Foto de ${comentario.nome}`}
-                  loading="lazy"
-                />
-
-                <div className="dados-comentario">
-                  <h3>{comentario.nome}</h3>
-
-                  <div
-                    className="stars"
-                    aria-label={`${comentario.estrelas} de 5 estrelas`}
-                  >
-                    <span className="estrelas-cheias">
-                      {'★'.repeat(comentario.estrelas)}
-                    </span>
-                    <span className="estrelas-vazias">
-                      {'★'.repeat(5 - comentario.estrelas)}
-                    </span>
-                  </div>
+        <div className="lista-produtos">
+          {PRODUTOS_DIGITAIS.map((produto) => (
+            <article className="produto-card" key={produto.id}>
+              <div className="produto-imagem-container">
+                <img src={produto.imagem} alt={produto.titulo} className="produto-img" />
+              </div>
+              <div className="produto-conteudo">
+                <h3 className="produto-titulo">{produto.titulo}</h3>
+                <p className="produto-descricao">{produto.descricao}</p>
+                <div className="produto-footer">
+                  <span className="produto-preco">{produto.preco}</span>
+                  <button type="button" className="botao-comprar" onClick={() => alert(`Comprar: ${produto.titulo}`)}>
+                    Comprar
+                  </button>
                 </div>
               </div>
-
-              <hr />
-
-              <p className="texto-comentario">{comentario.texto}</p>
             </article>
           ))}
         </div>
